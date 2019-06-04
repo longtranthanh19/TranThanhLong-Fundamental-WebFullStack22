@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hỏi Nhanh</title>
+
+    <script language="javascript" type="text/javascript">
+        function limitText(limitField, limitCount, limitNum) {
+            if (limitField.value.length > limitNum) {
+                limitField.value = limitField.value.substring(0, limitNum);
+            } else {
+                limitCount.value = limitNum - limitField.value.length;
+            }
+        }
+        </script>
+</head>
+
+<body>
+    <!-- <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+    <form action="/addquestion"  method="POST" >
+        <textarea name="addquestion" id="" cols="150" rows="10"></textarea>
+        <span>còn 200/200 ký tự</span>
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <form name="myform">
+            <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+            <textarea name="limitedtextarea" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,200);" 
+            onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,200);" cols="150" rows="10" >
+            </textarea><br>
+            <font-size="1">(Maximum characters: 200)<br>
+            You have <input readonly type="text" name="countdown" size="3" value="200"> characters left.</font>
+            </form>
+
+           
+</body>
+</html>

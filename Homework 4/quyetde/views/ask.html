@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hỏi Nhanh</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">Quyết.Đê!</a></li>
+        <li><a href="/ask">Hỏi Nhanh</a></li>
+        <li><a href="/">Đáp Gọn</a></li>
+    </ul>
+
+    <div class="textarea">
+    <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+    <form action="/addquestion"  method="POST" >
+        <textarea name="addquestion" id="" cols="150" rows="10"></textarea>
+        <br>
+        <span>còn <span id="remain"></span>/200 ký tự</span>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+    <script src="/public/ask.js"></script>
+
+
+           
+</body>
+</html>
